@@ -169,7 +169,7 @@ public class Runigram {
 	public static Color[][] blend(Color[][] image1, Color[][] image2, double alpha) {
 		//// Replace the following statement with your code
 		Color[][] newImage = new Color[image1.length][image1[0].length];
-		for (int i = 1; i < image1.length; i++) {
+		for (int i = 0; i < image1.length; i++) {
 			for (int j = 0; j < image1[0].length; j++) {
 				newImage[i][j] = blend(image1[i][j], image2[i][j], alpha);
 			}
@@ -190,7 +190,7 @@ public class Runigram {
 		Color[][] baseImage = new Color[source[0].length][source.length];
 		double alpha = 0;
 		baseImage = scaled(target, source[0].length, source.length);
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i < n; i++) {
 			alpha = (double) ((n - i) / n);
 			morphedImage = blend(source, baseImage, alpha);
 			Runigram.display(morphedImage);
