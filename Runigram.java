@@ -190,7 +190,7 @@ public class Runigram {
 		Color[][] baseImage = new Color[source[0].length][source.length];
 		double alpha = 0;
 		baseImage = scaled(target, source[0].length, source.length);
-		for (int i = 1; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 			alpha = (double) ((n - i) / n);
 			morphedImage = blend(source, baseImage, alpha);
 			Runigram.display(morphedImage);
